@@ -1,3 +1,25 @@
 .MMM-RemoteTemp div {
     color: purple;
 }
+
+.MMM-RemoteTemp .symbol {
+  margin-right: 15px;
+}
+
+.MMM-RemoteTemp .temp {
+  margin: 0;
+}
+
+.MMM-RemoteTemp .humidity {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.MMM-RemoteTemp .more {
+  margin: 0;
+}
+
+.MMM-RemoteTemp .more .fa {
+  font-size: 16px;
+  margin-left: 15px;
+}
