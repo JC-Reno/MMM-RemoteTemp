@@ -45,7 +45,9 @@ Or you could use all the options:
         module: 'mmm-RemoteTemp',
         position: 'lower_third',
         config: {
-            exampleContent: 'Welcome world'
+            exampleContent: 'Welcome world',
+            showTemperature: true,
+            showHumidity: true
         }
     },
 ```
@@ -55,6 +57,8 @@ Or you could use all the options:
 Option|Possible values|Default|Description
 ------|------|------|-----------
 `exampleContent`|`string`|not available|The content to show on the page
+`showTemperature`|`boolean`|true|Show the temperature
+`showHumidity`|`boolean`|true|Show the humidity
 
 ## Sending notifications to the module
 

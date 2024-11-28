@@ -1,3 +1,7 @@
+.MMM-RemoteTemp div {
+    color: purple;
+}
+
 .MMM-RemoteTemp .symbol {
   margin-right: 15px;
 }
@@ -18,4 +22,9 @@
 .MMM-RemoteTemp .more .fa {
   font-size: 16px;
   margin-left: 15px;
+}
+
+.MMM-RemoteTemp .data {
+  font-size: 20px;
+  margin-top: 10px;
 }
