@@ -1,7 +1,7 @@
 {
   "name": "mmm-remotetemp",
   "version": "1.0.0",
-  "description": "Display temperature, humidity, and/or battery level from a Smart Home Temperature Sensor.",
+  "description": "Display temperature, humidity, and/or battery level from a Smart Home Temperature Sensor. Module will receive data via a POST command from the external system.",
   "main": "MMM-RemoteTemp.js",
   "scripts": {
     "lint": "eslint .",
