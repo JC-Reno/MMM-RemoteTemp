@@ -1,26 +1,36 @@
 const NodeHelper = require("node_helper");
-const fetch = require("node-fetch");
+const axios = require("axios");
 
 module.exports = NodeHelper.create({
-  start() {
-    console.log("Remote Temperature Helper started.");
-  },
+    start: function() {
+        console.log("Starting node helper for: " + this.name);
+    },
 
-  fetchTemperatureData() {
-    fetch("http://example.com/api/temperature")
-      .then(response => response.json())
-      .then(data => {
-        this.sendSocketNotification("REMOTE_TEMPERATURE_DATA", data);
-      })
-      .catch(error => console.error("Error fetching temperature data:", error));
-  },
+    socketNotificationReceived: function(notification, payload) {
+        if (notification === "GET_REMOTE_TEMPERATURE_DATA") {
+            this.config = payload;
+            this.fetchData();
+            // Set up regular polling
+            setInterval(() => {
+                this.fetchData();
+            }, 60000); // Every minute
+        }
+    },
 
-  socketNotificationReceived(notification, payload) {
-    if (notification === "GET_REMOTE_TEMPERATURE_DATA") {
-      this.fetchTemperatureData();
+    fetchData: function() {
+        if (!this.config.sensorId) {
+            console.error("No sensorId configured");
+            return;
+        }
+
+        axios.post("http://localhost:8080/remote-temperature", {
+            sensorId: this.config.sensorId
+        })
+        .then(response => {
+            this.sendSocketNotification("REMOTE_TEMPERATURE_DATA", response.data);
+        })
+        .catch(error => {
+            console.error("Error fetching remote temperature data:", error);
+        });
     }
-    if (notification === "REMOTE_TEMPERATURE_DATA") {
-      this.sendSocketNotification("REMOTE_TEMPERATURE_DATA", payload);
-    }
-  }
 });
