@@ -4,10 +4,10 @@ Module.register("MMM-RemoteTemp", {
         icon: "home",
         showMore: true,
         showTemperature: true,
-        showHumidity: true
+        showHumidity: true,
     },
 
-    start: function() {
+    start() {
         this.temperature = null;
         this.humidity = null;
         this.battery = null;
@@ -16,7 +16,7 @@ Module.register("MMM-RemoteTemp", {
         this.sendSocketNotification("GET_REMOTE_TEMPERATURE_DATA", this.config);
     },
 
-    socketNotificationReceived: function(notification, payload) {
+    socketNotificationReceived(notification, payload) {
         if (notification === "REMOTE_TEMPERATURE_DATA") {
             this.temperature = payload.temp;
             this.humidity = payload.humidity;
@@ -27,7 +27,7 @@ Module.register("MMM-RemoteTemp", {
         }
     },
 
-    getDom: function() {
+    getDom() {
         const wrapper = document.createElement("div");
         wrapper.className = "MMM-RemoteTemp";
 
@@ -41,7 +41,7 @@ Module.register("MMM-RemoteTemp", {
 
         if (this.config.icon) {
             const icon = document.createElement("span");
-            icon.className = "fa fa-" + this.config.icon + " symbol";
+            icon.className = `fa fa-${this.config.icon} symbol`;
             dataDiv.appendChild(icon);
         }
 
@@ -83,5 +83,5 @@ Module.register("MMM-RemoteTemp", {
         }
 
         return wrapper;
-    }
+    },
 });
