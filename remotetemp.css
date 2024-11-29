@@ -7,16 +7,17 @@
 }
 
 .MMM-RemoteTemp .temp {
-  margin: 0;
+  margin: 0 15px;  /* Add left and right margins */
 }
 
 .MMM-RemoteTemp .humidity {
   display: inline-block;
   margin-left: 15px;
+  margin-right: 15px;  /* Add right margin */
 }
 
 .MMM-RemoteTemp .more {
-  margin: 0;
+  margin: 10px 0;  /* Add vertical spacing for the status line */
 }
 
 .MMM-RemoteTemp .more .fa {
