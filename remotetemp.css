@@ -28,3 +28,11 @@
   font-size: 20px;
   margin-top: 10px;
 }
+
+.MMM-RemoteTemp .battery {
+    margin-left: 15px;
+}
+
+.MMM-RemoteTemp .time {
+    display: inline-block;
+}
