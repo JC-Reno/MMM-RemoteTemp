@@ -1,19 +1,23 @@
 .MMM-RemoteTemp div {
     color: purple;
+    padding: 0 10px;  /* Add horizontal padding to all divs */
 }
 
 .MMM-RemoteTemp .symbol {
   margin-right: 15px;
+  padding: 0 10px;  /* Add padding to each element */
 }
 
 .MMM-RemoteTemp .temp {
   margin: 0 15px;  /* Add left and right margins */
+  padding: 0 10px;  /* Add padding to each element */
 }
 
 .MMM-RemoteTemp .humidity {
   display: inline-block;
   margin-left: 15px;
   margin-right: 15px;  /* Add right margin */
+  padding: 0 10px;  /* Add padding to each element */
 }
 
 .MMM-RemoteTemp .more {
@@ -28,6 +32,9 @@
 .MMM-RemoteTemp .data {
   font-size: 20px;
   margin-top: 10px;
+  display: flex;  /* Use flexbox for better spacing */
+  align-items: center;
+  gap: 15px;  /* Consistent gap between elements */
 }
 
 .MMM-RemoteTemp .battery {

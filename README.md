@@ -30,7 +30,7 @@ You can also hide the second line:
 
 This module is capable to display only a single temperature value. If you would like to see the value of more sensors on your mirror, add this module multiple times.
 
-For updates, please check the [CHANGELOG](https://github.com/balassy/MMM-RemoteTemperature/blob/master/CHANGELOG.md).
+For updates, please check the [CHANGELOG](https://github.com/JC-Reno/MMM-RemoteTemp/blob/master/CHANGELOG.md).
 
 
 ## Installation
@@ -143,7 +143,7 @@ The module includes CSS classes for each of the elements in the display allowing
 If you want to adjust the size of various elements, one option is to use the `zoom` property. This allows you to enlarge/reduce multiple elements at the same time. For example, the following would reduce everything in the module by 75%:
 
 ```css
-.MMM-RemoteTemperature {
+.MMM-RemoteTemp {
   zoom: 0.75;
 }
 ```
@@ -151,7 +151,7 @@ If you want to adjust the size of various elements, one option is to use the `zo
 By using the `::after` selector you can also move elements onto separate lines. For example, the following would put the humidity on a separate line below the temperature:
 
 ```css
-.MMM-RemoteTemperature .temp::after {
+.MMM-RemoteTemp .temp::after {
   content: "\a";
   white-space: pre;
 }
@@ -161,19 +161,19 @@ By using the `::after` selector you can also move elements onto separate lines. 
 Putting all of these formatting elements together, you can make a very compact layout if you want to stack the output from multiple sensors. For example:
 
 ```css
-.MMM-RemoteTemperature {
+.MMM-RemoteTemp {
   zoom: 0.75;
   line-height: 1em;
   margin-bottom: 10px;
 }
 
-.MMM-RemoteTemperature .symbol,
-.MMM-RemoteTemperature .humidity,
-.MMM-RemoteTemperature .time {
+.MMM-RemoteTemp .symbol,
+.MMM-RemoteTemp .humidity,
+.MMM-RemoteTemp .time {
   zoom: 0.75;
 }
 
-.MMM-RemoteTemperature .temp::after {
+.MMM-RemoteTemp .temp::after {
   content: "\a";
   white-space: pre;
 }
