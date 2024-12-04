@@ -17,7 +17,13 @@ module.exports = NodeHelper.create({
                 return;
             }
 
-            this.sendSocketNotification("REMOTE_TEMPERATURE_DATA", data);
+            // Send data with sensorId to allow filtering
+            this.sendSocketNotification("REMOTE_TEMPERATURE_DATA", {
+                sensorId: data.sensorId,
+                temp: data.temp,
+                humidity: data.humidity,
+                battery: data.battery
+            });
             res.status(200).json({ status: "success" });
         });
     },

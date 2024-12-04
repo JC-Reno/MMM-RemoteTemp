@@ -18,12 +18,15 @@ Module.register("MMM-RemoteTemp", {
 
     socketNotificationReceived(notification, payload) {
         if (notification === "REMOTE_TEMPERATURE_DATA") {
-            this.temperature = payload.temp;
-            this.humidity = payload.humidity;
-            this.battery = payload.battery;
-            this.lastUpdate = new Date();
-            this.loaded = true;
-            this.updateDom();
+            // Only update if the data is for this module's sensorId
+            if (payload.sensorId === this.config.sensorId) {
+                this.temperature = payload.temp;
+                this.humidity = payload.humidity;
+                this.battery = payload.battery;
+                this.lastUpdate = new Date();
+                this.loaded = true;
+                this.updateDom();
+            }
         }
     },
 
