@@ -1,28 +1,26 @@
 .MMM-RemoteTemp div {
     color: purple;
-    padding: 0 10px;  /* Add horizontal padding to all divs */
 }
 
 .MMM-RemoteTemp .symbol {
     display: inline-block;
-    padding: 0 10px;  /* Add padding to each element */
+    margin-right: 15px;  /* Increased from padding to margin */
 }
 
 .MMM-RemoteTemp .temp {
     display: inline-block;
-    padding: 0 10px;  /* Add padding to each element */
+    margin-right: 15px;  /* Increased from padding to margin */
 }
 
 .MMM-RemoteTemp .humidity {
     display: inline-block;
-    padding: 0 10px;  /* Add padding to each element */
 }
 
 .MMM-RemoteTemp .more {
-    margin-top: 0.5em;  /* Add space between data and status line */
+    margin-top: 10px;  /* Increased margin */
     display: flex;
     align-items: center;
-    gap: 1em;  /* Add consistent em-based gap between elements */
+    gap: 15px;  /* Consistent gap */
 }
 
 .MMM-RemoteTemp .more .fa {
