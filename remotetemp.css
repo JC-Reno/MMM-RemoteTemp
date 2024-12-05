@@ -4,24 +4,25 @@
 }
 
 .MMM-RemoteTemp .symbol {
-  margin-right: 15px;
-  padding: 0 10px;  /* Add padding to each element */
+    display: inline-block;
+    padding: 0 10px;  /* Add padding to each element */
 }
 
 .MMM-RemoteTemp .temp {
-  margin: 0 15px;  /* Add left and right margins */
-  padding: 0 10px;  /* Add padding to each element */
+    display: inline-block;
+    padding: 0 10px;  /* Add padding to each element */
 }
 
 .MMM-RemoteTemp .humidity {
-  display: inline-block;
-  margin-left: 15px;
-  margin-right: 15px;  /* Add right margin */
-  padding: 0 10px;  /* Add padding to each element */
+    display: inline-block;
+    padding: 0 10px;  /* Add padding to each element */
 }
 
 .MMM-RemoteTemp .more {
-  margin: 10px 0;  /* Add vertical spacing for the status line */
+    margin-top: 0.5em;  /* Add space between data and status line */
+    display: flex;
+    align-items: center;
+    gap: 1em;  /* Add consistent em-based gap between elements */
 }
 
 .MMM-RemoteTemp .more .fa {
@@ -34,7 +35,7 @@
   margin-top: 10px;
   display: flex;  /* Use flexbox for better spacing */
   align-items: center;
-  gap: 15px;  /* Consistent gap between elements */
+  gap: 1em;  /* Consistent em-based gap between elements */
 }
 
 .MMM-RemoteTemp .battery {
