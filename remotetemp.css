@@ -5,15 +5,18 @@
 .MMM-RemoteTemp .symbol {
     display: inline-block;
     margin-right: 15px;  /* Increased from padding to margin */
+    color: #6B4423;
 }
 
 .MMM-RemoteTemp .temp {
     display: inline-block;
     margin-right: 15px;  /* Increased from padding to margin */
+    color: #FF6F00;
 }
 
 .MMM-RemoteTemp .humidity {
     display: inline-block;
+    color: #007BFF;
 }
 
 .MMM-RemoteTemp .more {
@@ -36,8 +39,10 @@
   gap: 1em;  /* Consistent em-based gap between elements */
 }
 
-.MMM-RemoteTemp .battery {
+.MMM-RemoteTemp .battery,
+.MMM-RemoteTemp .battery.fa {
     margin-left: 15px;
+    color: #FFC107;
 }
 
 .MMM-RemoteTemp .time {
