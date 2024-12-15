@@ -1,7 +1,7 @@
 Module.register("MMM-RemoteTemp", {
     defaults: {
         sensorId: null,
-        icon: "home",
+        icon: "🏠", // Default emoji instead of Font Awesome icon
         showMore: true,
         showTemperature: true,
         showHumidity: true,
@@ -44,7 +44,8 @@ Module.register("MMM-RemoteTemp", {
 
         if (this.config.icon) {
             const icon = document.createElement("span");
-            icon.className = `fa fa-${this.config.icon} symbol`;
+            icon.className = "icon"; // Remove Font Awesome class
+            icon.textContent = this.config.icon; // Use textContent to display emoji
             dataDiv.appendChild(icon);
         }
 

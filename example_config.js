@@ -6,7 +6,7 @@
             pages: { main: "bottom_right", calendar: "top_right", crypto: "top_right" },
     config: {
         sensorId: "office",
-            icon: "briefcase",
+            icon: "💼",
                 showMore: true
     },
     position: "bottom_right"
@@ -16,8 +16,8 @@
         disabled: false,
             pages: { main: "bottom_right", calendar: "top_right", crypto: "top_right" },
     config: {
-        sensorId: "guest",
-            icon: "restroom",
+        sensorId: "gu",
+            icon: "🧍🏼‍♂️🧍🏼‍♂️",
                 showMore: true
     },
     position: "top_right"
@@ -28,7 +28,7 @@
             pages: { main: "bottom_center", calendar: "top_center", crypto: "top_center" },
     config: {
         sensorId: "garage",
-            icon: "car",
+            icon: "🚘",
                 showMore: true
     },
     position: "top_center"
@@ -39,7 +39,7 @@
             pages: { main: "bottom_center", calendar: "top_center", crypto: "top_center" },
     config: {
         sensorId: "patio",
-            icon: "umbrella-beach",
+            icon: "⛱️",
                 showMore: true
     },
     position: "top_center"
@@ -50,7 +50,7 @@
             pages: { main: "bottom_left", calendar: "top_left", crypto: "top_left" },
     config: {
         sensorId: "entry",
-            icon: "dungeon",
+            icon: "🚪",
                 showMore: true
     },
     position: "top_left"
@@ -61,7 +61,7 @@
             pages: { main: "bottom_left", calendar: "top_left", crypto: "top_left" },
     config: {
         sensorId: "refrigerator",
-            icon: "ice-cream",
+            icon: "❄️",
                 showMore: true
     },
     position: "top_left"
