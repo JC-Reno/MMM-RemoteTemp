@@ -32,7 +32,7 @@
 }
 
 .MMM-RemoteTemp .data {
-  font-size: 16px;
+  font-size: 10px;
   margin-top: 10px;
   display: flex;  /* Use flexbox for better spacing */
   align-items: center;

@@ -1,0 +1,24 @@
+/* ...existing code... */
+
+.MMM-RemoteTemp .symbol {
+    /* ...existing code... */
+    color: #6B4423 !important;
+}
+
+.MMM-RemoteTemp .temp {
+    /* ...existing code... */
+    color: #FF6F00 !important;
+}
+
+.MMM-RemoteTemp .humidity {
+    /* ...existing code... */
+    color: #007BFF !important;
+}
+
+.MMM-RemoteTemp .battery,
+.MMM-RemoteTemp .battery.fa {
+    /* ...existing code... */
+    color: #FFC107 !important;
+}
+
+/* ...existing code... */
